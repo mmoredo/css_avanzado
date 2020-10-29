@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html , body { height: 100%;}
+        body {
+            perspective: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            width: 100px; height: 100px;transition: all 0.4s; background-color: red;
+            transform-origin: top center;
+        }
+        div:hover{transform: rotateX(45deg)}
+    </style>
+</head>
+<body>
+    <div></div>    
+</body>
+</html>

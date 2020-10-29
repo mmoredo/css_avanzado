@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#espacio {
+    border: 3px dashed grey;
+    width: 350px;
+    height: 440px;
+    position: relative;
+    perspective: 800px;
+}
+#carta{
+    /* transform: rotateY(15deg); */
+    transform-style: preserve-3d;
+    transition: ;
+    /* transition: <property> <duration> <delay> <timing-function>
+    transition-property : nombre de la propiedad que queremos transicionar o all
+    transition-property: nombre [,nombre]
+    
+    transition-duration: la cantidad de tiempo de duracion total sin contar el delay expresada en segundos o ms 
+    
+    transition-delay: el tiempo de retraso de la transicion
+    
+    transition-timing-function: la curva de velocidad
+    
+    ease - ease-in - ease-out - ease-in-out
+    
+    */
+}
+#carta,.lado{    
+    width: 100%;
+    height: 100%;
+}
+#espacio:hover #carta{
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+}
+.lado{
+    /*visibilidad de cara de atras*/
+    /* backface-visibility: hidden; */
+    position: absolute;
+    top: 0px;
+    background-size: cover;
+
+}
+
+#frente{
+background-image: url(porygon.jpg);
+/* transform: rotateY(180deg); */
+background-color: rgb(223, 27, 27);
+
+}
+
+#dorso{
+    background-image: url(pokemonbackcard.png);
+    transform: rotateY(180deg);
+    background-color: bisque;
+    z-index: -1;
+}
+

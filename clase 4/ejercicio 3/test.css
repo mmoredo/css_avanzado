@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body {
+    height: 100%;
+}
+
+body {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+selectores de jerarquia : 
+
+padre hijo {} : cualquier hijo que este en cualquier parte del padre
+
+padre > hijo {} : cualquier hijo que sea hijo directo del padre
+*/
+
+body > div {
+    width: 100px;
+    height: 100px;
+    /* border: 3px dashed grey; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+p{margin-top: 50px;color: white}
+
+body > div > div {
+    height: 50%;
+    width: 20px;
+    position: absolute;
+    /* border: 2px dashed black; */
+    box-sizing: content-box;
+    transform-origin: bottom center;
+    animation-name: loader;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+body > div > div:after {
+    /* content : Establece el contenido de el nuevo elemento */
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    display: block;
+    border-radius: 50%;
+}
+
+body > div > div:nth-child(1) {animation-delay: 0s;}
+body > div > div:nth-child(2) {animation-delay: 0.15s;}
+body > div > div:nth-child(3) {animation-delay: 0.30s;}
+body > div > div:nth-child(4) {animation-delay: 0.45s;}
+body > div > div:nth-child(5) {animation-delay: 0.60s;}
+body > div > div:nth-child(6) {animation-delay: 0.75s;}
+
+@keyframes loader {
+    0% {transform: rotateZ(0deg)}
+    70% {transform: rotateZ(360deg)}
+    100% {transform: rotateZ(360deg)}
+}
+body {
+    background-color: rgb(105, 175, 223);
+}
+/*
+pseudo-selectores :
+
+pseudo-clases : son estados de un elemento 
+    
+    :hover = el cursor encima
+    :focus = foco/atencion en una etiqueta(tab ó click)
+    :visited = link ya visitado en la sesión
+    :active = mantener el click en un link
+    :blur = le saco foco/atencion a una etiqueta
+
+pseudo-elementos : hacen referencia a partes de un elemento 
+
+    :first-child
+    :last-child
+    padre:nth-child(N) = El hijo numero N arrancando en 1 
+    
+    :after = crea un nuevo elemento despues del contenido de una etiqueta pero ANTES del cierre de la etiqueta
+    
+    :before = crea un nuevo elemento antes del contenido de una etiqueta pero DESPUES de la apertura de la etiqueta
+
+
+    
+
+*/

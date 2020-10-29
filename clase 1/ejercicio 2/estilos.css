@@ -1,0 +1,11 @@
+#padre {
+    border: 2px solid black;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hijo {
+    border: 2px dashed red;
+}
